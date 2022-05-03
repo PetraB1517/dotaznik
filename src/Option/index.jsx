@@ -2,10 +2,10 @@ import React from 'react';
 import Icon from '../Icon/index';
 import './style.css';
 
-const Option = (props) => (
-  <div className="option">
-    <Icon type={props.type} />
-    <div>{props.text}</div>
+const Option = ({type,text, onSelected}) => (
+  <div onClick={() => onSelected()} className="option">
+    <Icon type={type} />
+    <div>{text}</div>
   </div>
 );
 
